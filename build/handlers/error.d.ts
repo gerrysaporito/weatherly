@@ -1,1 +1,1 @@
-export default function errorHandler(error: any, request: any, response: any, next: any): any;
+export default function errorHandler(error: any, req: any, res: any, next: any): any;
