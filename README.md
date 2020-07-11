@@ -58,13 +58,13 @@ Some notes about this 3rd parameter:
 </ul>
 
 <p>Here is a template:</p>
-<p><strong>https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}<strong></p>
+<p><strong><a href="#" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}</a><strong></p>
 
 <p>
 Here are some example reqeusts:
 </p>
 <ul>
-<li>https://swiftride-weather-api.herokuapp.com/api/weather/many/f/toronto</li>
-<li>https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston</li>
-<li>https://swiftride-weather-api.herokuapp.com/api/weather/one/k/Niagara%20Falls</li>
+<li><a href="https://swiftride-weather-api.herokuapp.com/api/weather/many/f/toronto" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/many/f/toronto</a></li>
+<li><a href="https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston</a></li>
+<li><a href="https://swiftride-weather-api.herokuapp.com/api/weather/one/k/Niagara%20Falls" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/one/k/Niagara%20Falls</a></li>
 </ul>
