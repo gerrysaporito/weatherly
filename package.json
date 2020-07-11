@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
     "start": "node build/index.js",
     "build": "tsc",
     "postinstall": "npm run build"

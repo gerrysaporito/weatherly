@@ -12,6 +12,8 @@ let app = express();
 app.use(ssl_redirect());
 app.use(cors());
 app.use(body_parser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 // Routes.
 app.use("/api/weather", weather_1.default);
 app.use(function (req, res, next) {
