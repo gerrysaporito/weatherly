@@ -4,10 +4,10 @@ import {
   get_weather_many_cities,
 } from "../handlers/weather";
 
-const router = express.Router();
+const WEATHER_ROUTES = express.Router();
 
 // Routing
-router.get("/one/:unit/:city", get_weather_one_city);
-router.get("/many/:unit/:cities", get_weather_many_cities);
+WEATHER_ROUTES.get("/one/:unit/:city", get_weather_one_city);
+WEATHER_ROUTES.get("/many/:unit/:cities", get_weather_many_cities);
 
-module.exports = router;
+export default WEATHER_ROUTES;

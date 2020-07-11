@@ -1,30 +1,29 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// Packages
-var express = require("express");
-var cors = require("cors");
-var body_parser = require("body-parser");
-var ssl_redirect = require("heroku-ssl-redirect");
-// Routes
-var error_1 = require("./handlers/error");
-var WEATHER_ROUTES = require("./handlers/weather_routes");
-// Variables
-var config_1 = require("./utils/config");
-var ENV_PORT = config_1.PORT || 5000;
-var app = express();
+const express = require("express");
+const cors = require("cors");
+const body_parser = require("body-parser");
+const ssl_redirect = require("heroku-ssl-redirect");
+const weather_1 = require("./routes/weather");
+const error_1 = require("./handlers/error");
+const config_1 = require("./utils/config");
+let ENV_PORT = config_1.PORT || 5000;
+let app = express();
 app.use(ssl_redirect());
 app.use(cors());
 app.use(body_parser.json());
-// ROUTES
-app.use("/api/weather", WEATHER_ROUTES);
+// Routes.
+app.use("/api/weather", weather_1.default);
 app.use(function (req, res, next) {
-    var err = new Error("Not Found.");
+    let err = new Error("Not Found.");
     err.status = 404;
     err.info = {};
     next(err);
 });
 app.use(error_1.default);
-//starting server
+// Starting Server.
 app.listen(ENV_PORT, function () {
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    let port = this.address().port;
+    let env = app.settings.env;
+    console.log(`Express server listening on port ${port} in ${env} mode.`);
 });
