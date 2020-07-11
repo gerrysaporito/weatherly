@@ -1,24 +1,19 @@
-// Packages
 import * as express from "express";
 import * as cors from "cors";
 import * as body_parser from "body-parser";
 import * as ssl_redirect from "heroku-ssl-redirect";
-
-// Routes
 import * as WEATHER_ROUTES from "./routes/weather";
-
-// Other imports
 import ERROR_HANDLER from "./handlers/error";
 import { PORT } from "./utils/config";
 
 let ENV_PORT = PORT || 5000;
-
 let app = express();
+
 app.use(ssl_redirect());
 app.use(cors());
 app.use(body_parser.json());
 
-// ROUTES
+// Routes.
 app.use("/api/weather", WEATHER_ROUTES);
 
 app.use(function (req, res, next) {
@@ -29,7 +24,7 @@ app.use(function (req, res, next) {
 });
 app.use(ERROR_HANDLER);
 
-//starting server
+// Starting Server.
 app.listen(ENV_PORT, function () {
   let port: number = this.address().port;
   let env: string = app.settings.env;

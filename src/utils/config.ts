@@ -1,8 +1,8 @@
+// Responsible for initilaizing environment variables.
+
 import * as dotenv from "dotenv";
 
-dotenv.config();
-
-let path = `${__dirname}/../../.env.test`;
+let path = `${__dirname}/../../.env`;
 
 dotenv.config({ path: path });
 
