@@ -3,7 +3,7 @@
 ## Background
 
 <p>
-This is a technical task from SwiftRide to create an api which retrieves weather data from an external source, <a href='http://api.openweathermap.org/' target="_blank">openweathermap.org</a>.
+  This is a technical task from <strong>SwiftRide</strong> to create an api which retrieves weather data from an external source, <a href='http://api.openweathermap.org/' target="_blank">openweathermap.org</a>.
 </p>
 
 </br>
