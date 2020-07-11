@@ -2,7 +2,7 @@ import * as express from "express";
 import * as cors from "cors";
 import * as body_parser from "body-parser";
 import * as ssl_redirect from "heroku-ssl-redirect";
-import * as WEATHER_ROUTES from "./routes/weather";
+import WEATHER_ROUTES from "./routes/weather";
 import ERROR_HANDLER from "./handlers/error";
 import { PORT } from "./utils/config";
 
