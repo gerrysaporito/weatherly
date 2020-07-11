@@ -3,7 +3,7 @@
 ## Background
 
 <p>
-  This is a technical task from <strong>SwiftRide</strong> to create an api which retrieves weather data from an external source, <a href='http://api.openweathermap.org/' target="_blank">openweathermap.org</a>.
+This is a technical task from <strong>SwiftRide</strong> to create an api which retrieves weather data from an external source, <a href='http://api.openweathermap.org/' target="_blank">openweathermap.org</a>.
 </p>
 
 </br>
@@ -45,8 +45,8 @@ The second parameter is the scale you want the temperature to be returned in. Sp
 The last parameter is the city (or cities) you want the data from. the first parameter first parameter (<i>one</i> or <i>many</i>) dictates how many cities you can choose, whether it'd be 1 or or multiple.
 </p>
 <ul>
-<li><strong>one</strong> - Choose 1 city to search</li>
-<li><strong>many</strong> - Choose 1 or more cities to search</li>
+<li>If you chose <strong>one</strong> as your first parameter you can enter 1 city to search</li>
+<li>If you chose <strong>many</strong> as your first parameter you can enter 1 or more cities to search</li>
 </ul>
 <p>
 Some notes about this 3rd parameter:
