@@ -77,7 +77,9 @@ exports.get_weather_one_city = get_weather_one_city;
 function get_weather_many_cities(req, res, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            let search_cities = req.params.cities.split(",");
+            let search_cities = req.params.cities
+                .split(",")
+                .filter((city) => city != "");
             let unit = req.params.unit.toLowerCase();
             let cities = [];
             let temp_max_array = [];
