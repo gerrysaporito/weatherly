@@ -20,9 +20,24 @@ export async function get_weather_one_city(req: any, res: any, next: any) {
     let city: string = req.params.city;
     let unit: string = req.params.unit.toLowerCase();
 
+    // Error checking for unit.
+    if (Object.keys(Units).indexOf(unit) == -1) {
+      let msg = `Scale unit '${unit}' not found. Please choose either c (Celsius), f (Farenheit), or k (Kelvin).`;
+      return res.json({
+        status: 401,
+        message: msg,
+      });
+    }
+
     // Request
     let query: string = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPEN_WEATHER_MAP_API_KEY}`;
-    let raw_response = await axios.get(query);
+    let raw_response = await axios.get(query).catch((err) => {
+      let msg = `City named '${city}' not found. Please check the city name again.`;
+      return res.json({
+        status: 401,
+        message: msg,
+      });
+    });
     let data = raw_response.data;
 
     // Converts temperature to reflect proper unit if needed.
@@ -62,11 +77,26 @@ export async function get_weather_many_cities(req: any, res: any, next: any) {
     let temp_max_array: Array<number> = [];
     let temp_min_array: Array<number> = [];
 
+    // Error checking for unit.
+    if (Object.keys(Units).indexOf(unit) == -1) {
+      let msg = `Scale unit '${unit}' not found. Please choose either c (Celsius), f (Farenheit), or k (Kelvin).`;
+      return res.json({
+        status: 401,
+        message: msg,
+      });
+    }
+
     // Makes requests for each city and sorts information.
     for (let city of search_cities) {
       // Request
       let query: string = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPEN_WEATHER_MAP_API_KEY}`;
-      let raw_response = await axios.get(query);
+      let raw_response = await axios.get(query).catch((err) => {
+        let msg = `City named '${city}' not found. Please check the city name again.`;
+        return res.json({
+          status: 401,
+          message: msg,
+        });
+      });
       let data = raw_response.data;
 
       cities.push(data.name);

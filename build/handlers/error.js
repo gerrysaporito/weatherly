@@ -9,11 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @param: next (Function)
  * @return Object
  */
-function errorHandler(error, req, res, next) {
-    return res.status(error.status || 500).json({
+function errorHandler(err, req, res, next) {
+    return res.status(err.status || 500).json({
         error: {
-            message: error.message || "Oops! Something went wrong.",
-            info: error.info || { request: req },
+            message: err.message || "Oops! Something went wrong.",
+            info: err.info || { request: req },
         },
     });
 }

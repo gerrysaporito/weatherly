@@ -27,9 +27,23 @@ function get_weather_one_city(req, res, next) {
         try {
             let city = req.params.city;
             let unit = req.params.unit.toLowerCase();
+            // Error checking for unit.
+            if (Object.keys(definitions_1.Units).indexOf(unit) == -1) {
+                let msg = `Scale unit '${unit}' not found. Please choose either c (Celsius), f (Farenheit), or k (Kelvin).`;
+                return res.json({
+                    status: 401,
+                    message: msg,
+                });
+            }
             // Request
             let query = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${config_1.OPEN_WEATHER_MAP_API_KEY}`;
-            let raw_response = yield axios_1.default.get(query);
+            let raw_response = yield axios_1.default.get(query).catch((err) => {
+                let msg = `City named '${city}' not found. Please check the city name again.`;
+                return res.json({
+                    status: 401,
+                    message: msg,
+                });
+            });
             let data = raw_response.data;
             // Converts temperature to reflect proper unit if needed.
             let temp_max = helpers_1.get_temp_from_units(data.main.temp_max, definitions_1.Units[unit]);
@@ -68,11 +82,25 @@ function get_weather_many_cities(req, res, next) {
             let cities = [];
             let temp_max_array = [];
             let temp_min_array = [];
+            // Error checking for unit.
+            if (Object.keys(definitions_1.Units).indexOf(unit) == -1) {
+                let msg = `Scale unit '${unit}' not found. Please choose either c (Celsius), f (Farenheit), or k (Kelvin).`;
+                return res.json({
+                    status: 401,
+                    message: msg,
+                });
+            }
             // Makes requests for each city and sorts information.
             for (let city of search_cities) {
                 // Request
                 let query = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${config_1.OPEN_WEATHER_MAP_API_KEY}`;
-                let raw_response = yield axios_1.default.get(query);
+                let raw_response = yield axios_1.default.get(query).catch((err) => {
+                    let msg = `City named '${city}' not found. Please check the city name again.`;
+                    return res.json({
+                        status: 401,
+                        message: msg,
+                    });
+                });
                 let data = raw_response.data;
                 cities.push(data.name);
                 temp_max_array.push(data.main.temp_max);
@@ -85,7 +113,7 @@ function get_weather_many_cities(req, res, next) {
             let response = {
                 cities: cities,
                 date: helpers_1.get_date(common_1.DateTypes.Date),
-                unit: definitions_1.Units.c,
+                unit: definitions_1.Units[unit],
                 average_high: temp_max,
                 average_low: temp_min,
             };
