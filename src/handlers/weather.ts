@@ -71,7 +71,9 @@ export async function get_weather_one_city(req: any, res: any, next: any) {
  */
 export async function get_weather_many_cities(req: any, res: any, next: any) {
   try {
-    let search_cities: Array<string> = req.params.cities.split(",");
+    let search_cities: Array<string> = req.params.cities
+      .split(",")
+      .filter((city) => city != "");
     let unit: string = req.params.unit.toLowerCase();
     let cities: Array<string> = [];
     let temp_max_array: Array<number> = [];
