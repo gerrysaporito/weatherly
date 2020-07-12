@@ -88,7 +88,7 @@ export async function get_weather_many_cities(req: any, res: any, next: any) {
     let response: ManyCityResponse = {
       cities: cities,
       date: get_date(DateTypes.Date),
-      unit: Units.c,
+      unit: Units[unit],
       average_high: temp_max,
       average_low: temp_min,
     };
