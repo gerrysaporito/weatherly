@@ -1,4 +1,4 @@
-# Swiftride Weather API
+# SwiftRide Weather API
 
 ## Background
 
