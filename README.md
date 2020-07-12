@@ -60,9 +60,8 @@ Some notes about this 3rd parameter:
 <p>Here is a template:</p>
 <p><strong><a href="#" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}</a><strong></p>
 
-<p>
-Here are some example reqeusts:
-</p>
+## Example Requests
+
 <ul>
 <li><a href="https://swiftride-weather-api.herokuapp.com/api/weather/many/f/toronto" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/many/f/toronto</a></li>
 <li><a href="https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston</a></li>
