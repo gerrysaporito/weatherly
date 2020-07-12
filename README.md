@@ -52,7 +52,6 @@ Some notes about this 3rd parameter:
 <ul>
 <li>Spaces in words will have to be replaced with <strong>%20</strong></li>
 <li>Seperate more than 1 city with <strong>commas</strong></li>
-<li>There should be no comma following the last city</li>
 </ul>
 
 <p>Here is a template:</p>
