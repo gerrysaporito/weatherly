@@ -58,7 +58,7 @@ Some notes about this 3rd parameter:
 </ul>
 
 <p>Here is a template:</p>
-<p><strong><a href="#" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}</a><strong></p>
+<p><strong><a href="https://github.com/gksapori/swiftride-weather-api#example-requests" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}</a><strong></p>
 
 ## Example Requests
 
