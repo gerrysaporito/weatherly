@@ -6,8 +6,6 @@
 This is a technical task from <strong>SwiftRide</strong> to create an api which retrieves weather data from an external source, <a href='http://api.openweathermap.org/' target="_blank">openweathermap.org</a>.
 </p>
 
-</br>
-
 <p>
 The goal is to create GET API endpoints to retrieve weather data from:<br>
 <ul>
