@@ -7,16 +7,11 @@
  * @param: next (Function)
  * @return Object
  */
-export default function errorHandler(
-  error: any,
-  req: any,
-  res: any,
-  next: any
-) {
-  return res.status(error.status || 500).json({
+export default function errorHandler(err: any, req: any, res: any, next: any) {
+  return res.status(err.status || 500).json({
     error: {
-      message: error.message || "Oops! Something went wrong.",
-      info: error.info || { request: req },
+      message: err.message || "Oops! Something went wrong.",
+      info: err.info || { request: req },
     },
   });
 }

@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/weather", WEATHER_ROUTES);
 
 app.use(function (req, res, next) {
-  let err: any = new Error("Not Found.");
+  let err: any = new Error("Endpoint Not Found.");
   err.status = 404;
   err.info = {};
   next(err);
