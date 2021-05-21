@@ -64,3 +64,6 @@ Some notes about this 3rd parameter:
 <li><a href="https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston</a></li>
 <li><a href="https://swiftride-weather-api.herokuapp.com/api/weather/one/k/Niagara%20Falls" target="_blank">https://swiftride-weather-api.herokuapp.com/api/weather/one/k/Niagara%20Falls</a></li>
 </ul>
+  
+## NOTES
+This is run on a free heroku server so the first request will take a few seconds to load (Heroku has to start up the server)
