@@ -55,23 +55,23 @@ You can query by making `GET` requests and following this template: `https://swi
 
 The first parameter is the number of cities you want to get data for. One endpoint will return data from 1 city and the other will return data from multiple cities. The diffrent endpoints will return data in different formats.
 
-- one - Data for a single (1) city
-- many - Data for multiple (1+) cities
+- `one` - Data for a single (1) city
+- `many` - Data for multiple (1+) cities
 
 #### Second Parameter: Temperature Unit
 
 The second parameter is the scale you want the temperature to be returned in. Specifying the scale will define what unit of temperature measurement to use. There are currently 3 scales:
 
-- c - Celsius
-- f - Farenheit
-- k - Kelvin
+- `c` - Celsius
+- `f` - Farenheit
+- `k` - Kelvin
 
 #### Third Parameter: Requested Cities
 
 The last parameter is the city (or cities) you want the data from. the first parameter first parameter (one or many) dictates how many cities you can choose, whether it'd be 1 or or multiple.
 
-- If you chose one as your first parameter you can enter 1 city to search
-- If you chose many as your first parameter you can enter 1 or more cities to search
+- If you chose `one` as your first parameter you can enter 1 city to search
+- If you chose `many` as your first parameter you can enter 1 or more cities to search
 
 Some notes about this 3rd parameter:
 
