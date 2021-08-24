@@ -47,7 +47,7 @@ This app has the following functionalities:
 - Query temperature data for one or multiple cities
 - Provide temperature in different units (Celsius, Farenheit, Kelvin)
 
-### Query Parameters
+### Query Parameters ⭐️
 
 You can query by making `GET` requests and following this template: `https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}`.
 
@@ -78,7 +78,7 @@ Some notes about this 3rd parameter:
 - Spaces in words will have to be replaced with %20
 - Seperate more than 1 city with commas
 
-### Example Requests
+### Example Requests 💫
 
 - [https://swiftride-weather-api.herokuapp.com/api/weather/many/f/toronto](https://swiftride-weather-api.herokuapp.com/api/weather/many/f/toronto)
 - [https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston](https://swiftride-weather-api.herokuapp.com/api/weather/many/c/toronto,ottawa,kingston)
