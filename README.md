@@ -1,4 +1,4 @@
-# Weather API
+# Weatherly (Weather API)
 
 ## Introduction 🎩
 
