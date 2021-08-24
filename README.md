@@ -4,7 +4,7 @@
 
 This is an api that allows users to query weather data from [openweathermap.org](http://api.openweathermap.org/).
 
-### Notes
+### Notes 🖍
 
 This api is run on a free heroku server so the first request will take a few seconds to load (Heroku has to start up the server)
 
@@ -102,6 +102,6 @@ For one, there is no validation or sanitization on the query. This could cause p
 
 To help with this, a query validation middleware can be implemented to provide a detailed response to the user's issues.
 
-### Notes
+### Notes 🖍
 
 This is by no means an exhaustive list but only a few of the more critical points.
