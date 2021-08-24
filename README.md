@@ -3,10 +3,7 @@
 ## Introduction 🎩
 
 This is an api that allows users to query weather data from [openweathermap.org](http://api.openweathermap.org/).
-
-### Notes 🖍
-
-This api is run on a free heroku server so the first request will take a few seconds to load (Heroku has to start up the server)
+**This api is run on a free heroku server so the first request will take a few seconds to load (Heroku has to start up the server).**
 
 ## Description 📝
 
