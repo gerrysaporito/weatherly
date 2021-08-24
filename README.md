@@ -17,7 +17,8 @@ This api is used to query weather data and was used to learn more about Typescri
 This project gave me a chance to work with new technologies including:
 
 - [Typescript](https://www.typescriptlang.org/)
-- [Node](https://kubernetes.io/) (typed)
+- [Node](https://nodejs.org/en/)
+- [Express](https://expressjs.com/) (typed)
 
 This project also taught me more about:
 
@@ -51,7 +52,7 @@ This app has the following functionalities:
 
 ### Query Parameters
 
-You can make a query by making `get` requests and following this template: `https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}`.
+You can query by making `GET` requests and following this template: `https://swiftride-weather-api.herokuapp.com/api/weather/{first}/{second}/{third}`.
 
 #### First Parameter: Return Data Format
 
