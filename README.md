@@ -66,7 +66,7 @@ The first parameter is the number of cities you want to get data for. One endpoi
 The second parameter is the scale you want the temperature to be returned in. Specifying the scale will define what unit of temperature measurement to use. There are currently 3 scales:
 
 - `c` - Celsius
-- `f` - Farenheit
+- `f` - Farenheit 
 - `k` - Kelvin
 
 #### Third Parameter: Requested Cities
